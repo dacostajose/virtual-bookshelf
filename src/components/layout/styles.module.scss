@@ -1,0 +1,62 @@
+@import "../../assets/variables";
+
+.mainContainer {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+
+}
+
+.appBar {
+    background-color: $primary;
+    display: flex;
+    flex-direction: row;
+
+    .toolBar {
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .actionContainer {
+            width: 60%;
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            align-items: center;
+        }
+    }
+}
+
+.bottomTabnav {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100vw
+}
+
+.mobileAppBar {
+    background-color: #ffffff;
+    color: $primary;
+    text-align: center;
+
+    div {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+
+        h3 {
+            flex-grow: 1;
+            text-align: right;
+        }
+
+        .mobileActionContainer {
+            display: flex;
+            width: 50%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+        }
+    }
+}

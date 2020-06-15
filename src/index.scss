@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,700;1,400;1,800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 400 14px 'Open Sans', sans-serif;
+}
+
+input,
+button,
+textarea {
+  font: 400 14px 'Open Sans', sans-serif;
+}
+
+.text-transform-none {
+  text-transform: none;
+}
+.cursor-pointer{
+  cursor: pointer;
+}

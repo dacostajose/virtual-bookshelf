@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+    overflow: auto;
+    margin-top: 20px;
+}
+
+.headerList {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    button {
+        width: 80%;
+    }
+}
+
+.textField {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

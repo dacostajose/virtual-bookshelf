@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useContext } from 'react';
+import Routes from './router';
+import { StylesProvider, createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import { observer } from 'mobx-react-lite';
+import { MainStore } from './stores/mainStore';
 
-function App() {
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#006F99"
+    },
+    secondary: {
+      main: "#0E1E3D"
+    },
+    success: {
+      main: "#408400"
+    },
+    warning: {
+      main: "#EFC620"
+    },
+    error: {
+      main: "#EF423B"
+    },
+  },
+});
+const App = observer(() => {
+  const mainStore = useContext(MainStore);
+
+  useEffect(() => {
+    mainStore.loadBooks();
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <StylesProvider injectFirst>
+        <Routes />
+      </StylesProvider>
+    </ThemeProvider>
   );
-}
+})
 
 export default App;

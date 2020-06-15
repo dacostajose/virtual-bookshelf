@@ -1,0 +1,29 @@
+.card {
+    margin: 10px;
+    width: 320px;
+}
+
+.mediaCard {
+    height: 150px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-grow: 1;
+    overflow: auto;
+
+}
+
+.itemsContainer {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ordeanarDiv {
+    padding: 10px;
+}
