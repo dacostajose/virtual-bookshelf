@@ -1,13 +1,21 @@
 import { observable, decorate, action, computed } from "mobx";
 import { createContext } from "react";
-
+/*
+    MobX é mais simples que redux e dá uma liberdade maior ao desenvolvedor além de ser bem semelhante ao recoil js
+    https://recoiljs.org/
+    https://github.com/facebookexperimental/Recoil
+    https://twitter.com/mweststrate/status/1261369870152871937
+    nesta thread o criador do MobX explica como as duas são abordagens semelhantes para resolver o mesmo problema
+    mas o MobX tem a vantagem de não ser fechado apenas para react, então esta Store poderia ser utilizada em projetos para
+    Angular (https://github.com/mobxjs/mobx-angular) e Vuejs (https://github.com/mobxjs/mobx-vue) com o mínimo de alterações
+    além de ser possível utilizar com Flutter(https://github.com/mobxjs/mobx.dart) alterando o que for necessário para rodar
+*/
 interface PreBook {
     title: string,
     description: string,
     author: string,
     category: string,
 }
-
 export interface Book {
     id: number,
     timestamp: number,

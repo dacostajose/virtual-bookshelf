@@ -36,3 +36,15 @@
     margin-top: 20px;
     font-weight: 400;
 }
+
+.collumButtonDisplay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        font-size: xx-small;
+
+    }
+}

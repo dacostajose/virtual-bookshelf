@@ -1,7 +1,6 @@
-import React, { useContext, FunctionComponent, useState } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 import styles from "./styles.module.scss";
 import { observer } from "mobx-react-lite";
-import { MainStore } from '../../stores/mainStore';
 import { AppBar, Toolbar, Typography, Hidden, BottomNavigation, BottomNavigationAction, IconButton } from "@material-ui/core";
 import { Icon } from "@iconify/react";
 import homeIcon from '@iconify/icons-mdi/home';
@@ -14,7 +13,6 @@ interface LayoutProps {
     showBackButton?: boolean
 }
 const Layout: FunctionComponent<LayoutProps> = observer(({ children, title, initialTab, showBackButton }) => {
-    const mainStore = useContext(MainStore);
     const [bottomTabVal, setBottomTabVal] = useState(initialTab);
     const historic = useHistory();
 

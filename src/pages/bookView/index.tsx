@@ -6,7 +6,7 @@ import Layout from '../../components/layout';
 import {
     IconButton,
     MenuItem,
-    Menu
+    Menu,
 } from '@material-ui/core';
 import { Icon } from '@iconify/react';
 import bookOpenPageVariant from '@iconify/icons-mdi/book-open-page-variant';
@@ -75,13 +75,18 @@ const BookView = observer(() => {
                                     <strong>Adicionado</strong><br />
                                     {formateDate(book.timestamp)}
                                 </p>
-                                <IconButton aria-controls="menu-edit" aria-haspopup="true" onClick={handleClick}>
-                                    {book.category === "read" ? (<Icon icon={notebookCheck} />) :
-                                        book.category === "reading" ? (<Icon icon={bookOpenPageVariant} />) :
-                                            book.category === "wantToRead" ? (<Icon icon={bookSearch} />) :
-                                                (<Icon icon={bookIcon} />)
-                                    }
-                                </IconButton>
+                                <div className={style.collumButtonDisplay}>
+                                    <IconButton aria-controls="menu-edit" aria-haspopup="true" onClick={handleClick}>
+                                        {book.category === "read" ? (<Icon icon={notebookCheck} />) :
+                                            book.category === "reading" ? (<Icon icon={bookOpenPageVariant} />) :
+                                                book.category === "wantToRead" ? (<Icon icon={bookSearch} />) :
+                                                    (<Icon icon={bookIcon} />)
+                                        }
+                                    </IconButton>
+                                    <p>
+                                        Botão para editar
+                                    </p>
+                                </div>
                                 <Menu
                                     id="menu-edit"
                                     anchorEl={anchorEl}
